@@ -242,9 +242,9 @@ export function login(data) {
         }).then(res => {
             const key = '7PHs6U33kX';
             const { status, message } = res.data;
-            // console.log("response from login API",res.data)
+            console.log("response from login API",res.data)
             const userCode = res.data["user-code"];
-            if(status === 200 && message === "Successfully login.") {
+            if(status === 200 && message === "login success") {
                 const token = res.data['token'];
                 const userCode = res.data['user-code'];
                 const role = res.data['role'];

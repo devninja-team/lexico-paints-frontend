@@ -8,7 +8,7 @@ import setAuthorizationToken from "./utils/AuthHeaders";
 import {setCurrentUser, setUserRegion, setUserRole, setWhoAmI} from "./utils/Actions";
 import axios from 'axios';
 //baseURL of API
-axios.defaults.baseURL = "https://crmapi.tftc.company";
+axios.defaults.baseURL = "http://localhost:3001/";
 if(localStorage.getItem("region") === "UK") {
     console.log("REGION UK")
     store.dispatch(setUserRegion({region:"?region=UK"}));

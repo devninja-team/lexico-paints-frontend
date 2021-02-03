@@ -20,9 +20,8 @@ const Header = (props) => {
                     <div className="logo-toggle d-flex justify-content-between align-items-center">
                         <div className="logo">
                             <a className="navbar-brand" href="#">
-                            {
-                                query === "?region=UK" ? "Wine Hub (UK)" : "Wine Hub (US)"
-                            }</a>
+                                Lexico Paints (IN)
+                            </a>
                         </div>
                         <div className="menu-toggle">
                             <button type="button" className="btn" onClick={() => props.setButtonToggle(!props.toggle)}>
