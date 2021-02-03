@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+body {
+  font-family: "Montserrat";
+  font-weight: normal;
+  background-color: #F1F2F6;
+  background-image: linear-gradient(180deg, rgba(231, 231, 231, 0.1) 47.3%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+pre {
+  white-space: break-spaces;
+}
+
+.main-wrapper {
+  height: calc(100vh - 66px);
+  overflow: hidden;
+  .middle-content {
+    flex: 1;
+    overflow: auto;
+    padding: 15px 30px 15px 30px;
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: 15px;
+    }
+  }
+}
+
+.custom-select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+  .custom-selectDrop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #0085FF;
+    border-radius: 25px;
+    .custom-select__trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 3px 3px 12px;
+      font-family: Montserrat;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #0085FF;
+      cursor: pointer;
+      min-width: 80px;
+      .arrow {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        margin: 0 4px;
+      }
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+    &.open {
+      .custom-select__trigger {
+        .arrow {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .custom-options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+    .custom-options {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid #E7E7E7;
+      background: #fff;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+      .custom-option {
+        position: relative;
+        display: block;
+        padding: 10px 22px;
+        font-family: Montserrat;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #8D8D8D;
+        cursor: pointer;
+        transition: all 0.5s;
+        word-break: break-word;
+        &:hover {
+          background-color: #E7E7E7;
+        }
+        &.selected {
+          color: #666666;
+          background-color: #E7E7E7;
+        }
+        &.category-title {
+          color: #ffffff;
+          background-color: #0085FF;
+        }
+      }
+    }
+  }
+}

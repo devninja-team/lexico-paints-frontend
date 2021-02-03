@@ -1,0 +1,167 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.notes-page {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  .notes-row {
+    .notes-table-col {
+      flex: 1;
+      .table-responsive {
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        padding-bottom: 16px;
+        .table {
+          margin-bottom: 0;
+          th {
+            color: #595959;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 600;
+            border-top: none;
+            border-bottom: 1px solid #E7E7E7;
+            height: 45px;
+            padding: 11px 20px;
+          }
+          td {
+            color: #595959;
+            font-size: 13px;
+            line-height: 28px;
+            font-weight: 500;
+            border-top: 1px solid #E7E7E7;
+            padding: 8px 20px;
+            &:first-child {
+              &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                height: 1px;
+              }
+            }
+            span {
+              font-family: Montserrat;
+              font-weight: normal;
+              font-size: 13px;
+              line-height: 16px;
+              color: #066AFF;
+            }
+          }
+          &.table-fixed {
+            thead {
+              width: calc(100% - 1rem);
+            }
+            tbody {
+              height: 300px;
+              overflow-y: auto;
+              width: 100%;
+            }
+            thead, tbody, tr, td, th {
+              display: flow-root;
+            }
+            tbody td,
+            tbody th,
+            thead > tr > th {
+              float: left;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+    .notes-detail-col {
+      flex: 1;
+      margin-left: 20px;
+      max-width: 64%;
+      .top-date-row {
+        background: #80C2FF;
+        border-radius: 15px;
+        .date-time-col {
+          padding: 18px 20px;
+          label {
+            font-family: Montserrat;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            margin-bottom: 0;
+            margin-right: 10px;
+          }
+          span {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+          }
+        }
+      }
+      .detail-block {
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 17px 20px;
+        .detail-title {
+          span {
+            font-family: Montserrat;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+            color: #595959;
+          }
+        }
+        p {
+          font-family: Montserrat;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          color: #595959;
+        }
+        pre {
+          width: 100%;
+          word-break: break-word;
+        }
+      }
+      .add-notes-block {
+        background: #FFDCB3;
+        border-radius: 20px;
+        padding: 20px;
+        .title-notes {
+          font-family: Montserrat;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FF8A00;
+          svg {
+            margin-right: 10px;
+            path {
+              fill: #FF8A00;
+            }
+          }
+        }
+        .notes-text-box {
+          .form-control {
+            background-color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            padding: 14px;
+            resize: none;
+          }
+        }
+        .save-btn {
+          .btn {
+            font-family: Montserrat;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FF8A00;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+}

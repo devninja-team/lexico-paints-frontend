@@ -1,0 +1,128 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.transaction-page {
+    .account-info-tabs {
+        margin-left: 34px;
+        flex: 1;
+        justify-content: flex-end;
+        @media screen and (max-width: 1024px){
+          margin-top: 15px;
+          margin-left: 0;
+          justify-content: center;
+        }
+        .account-tabs-row {
+          background: #0085FF;
+          border-radius: 25px;
+          padding: 0 10px;
+          @media screen and (max-width: 480px){
+            padding: 0 5px;
+          }
+          .account-tab-list {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #FFFFFF;
+            padding: 9px 15px;
+            cursor: pointer;
+            @include media-breakpoint-down(xs) {
+              padding: 9px 12px;
+            }
+            @media screen and (max-width: 480px){
+              padding: 9px 8px;
+            }
+            @media screen and (max-width: 400px){
+              padding: 9px 6px;
+              font-size: 11px;
+            }
+            @media screen and (max-width: 360px){
+              padding: 9px 4px;
+              font-size: 10px;
+            }
+            &:hover {
+              text-decoration: none;
+            }
+            &.active {
+              font-weight: bold;
+            }
+  
+          }
+        }
+      }
+}
+
+.exception-detail-modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        .change-address-body {
+          .change-address-wrapper {
+            .change-address-list {
+              label {
+                width: 110px;
+              }
+              .custom-select-wrapper {
+                width: calc(100% - 130px);
+                margin-bottom: 0;
+                .search-input {
+                  border: none;
+                  width: 100%;
+                  outline: none;
+                  color: hsl(0,0%,50%);
+                }
+                .custom-selectDrop {
+                  border-radius: 0;
+                  border: 1px solid #c4c4c4;
+                  .custom-options {
+                    max-height: 190px;
+                    overflow: auto;
+                  }
+                }
+              }
+              .dropUp {
+                width: calc(100% - 130px);
+                .custom-select-wrapper {
+                  width: 100%;
+                  .basic-multi-select {
+                    width: 100%;
+                    .select__menu {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }              
+              &.street-filed {
+                .text-input {
+                  width: calc(100% - 130px);
+                }
+                .dropUp {
+                  .text-input {
+                    width: 100%;
+                  }
+                  .basic-multi-select {
+                    width: 100%;
+                    margin-top: 6px;
+                    .select__control {
+                      .select__value-container {
+                        .select__placeholder  {
+                          font-size: 14px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          } 
+        } 
+      }
+    } 
+  }
+}
+
+.required-filed {
+  padding-left: 4px;
+  color: red;
+}

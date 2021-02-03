@@ -1,0 +1,198 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.calls-page {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  .calls-row {
+    .calls-table-col {
+      flex: 1 50%;
+      .calls-drop-down {
+        label {
+          color: #595959;
+        }
+      }
+      .table-responsive {
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        height: 100%;
+        .table {
+          margin-bottom: 0;
+          th {
+            color: #595959;
+            font-size: 14px;
+            line-height: 23px;  
+            font-weight: 600;
+            border-top: none;
+            border-bottom: 1px solid #E7E7E7;
+            height: 45px;
+            padding: 11px 20px;
+          }
+          td {
+            color: #595959;
+            font-size: 13px;
+            line-height: 28px;
+            font-weight: 500;
+            border-top: 1px solid #E7E7E7;
+            padding: 8px 20px;
+            form {
+              button {
+                border:none;
+                outline: none;
+                &:focus {
+                  border: none;
+                }
+              }
+            }
+            &:first-child {
+              &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                height: 1px;
+              }
+            }
+            span {
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 13px;
+              line-height: 16px;
+              text-transform: uppercase;
+              color: #8D8D8D;
+            }
+            .btn-play {
+              background: transparent;
+            }
+          }
+          &.table-fixed {
+            thead {
+              width: calc(100% - 1rem);
+            }
+            tbody {
+              height: 300px;
+              overflow-y: auto;
+              width: 100%;
+            }
+            thead, tbody, tr, td, th {
+              display: flow-root;
+            }
+            tbody td,
+            tbody th,
+            thead > tr > th {
+              float: left;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+    .calls-listen-btn-col {
+      flex: 30%;
+      max-width: 30%;
+      margin: 0 25px;
+      @include media-breakpoint-down(md){
+        flex: 1;
+        max-width: 100%;
+      }
+    }
+    .calls-detail-col {
+      flex: 1 30%;
+    }
+  }
+  .blocks {
+    &-details {
+      width: 162px;
+      height: 162px;
+      color: #FFFFFF;
+      border-radius: 15px;
+      .icon {
+        margin-bottom: 16px;
+      }
+      &.call {
+        background: rgba(13, 197, 9, 0.5);
+      }
+      &.listen {
+        background: rgba(0, 133, 255, 0.5);
+      }
+      &:not(:last-child) {
+        margin-bottom: 24px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 0;
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+
+  .details {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 34px 20px;
+    font-family: Montserrat;
+    color: #595959;
+    &-first-section {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      margin-bottom: 38px;
+
+      .title {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .sub-title {
+        font-weight: 500;
+      }
+      & > div:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+    &-second-section {
+      margin-bottom: 50px;
+      h4 {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &-bottom-section {
+      a {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: capitalize;
+        color: #0085FF;
+        white-space: nowrap;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        &:hover {
+          text-decoration: none;
+        }
+        .add-detail-icon, .edit-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
+::-webkit-scrollbar-button       { background: transparent;
+  button{
+    color: #FF5B5B;
+  }
+
+}

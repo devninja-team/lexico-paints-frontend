@@ -1,0 +1,95 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.fc-button-primary {
+    background-color: #0085FF !important;
+}
+.fc-dayGridMonth-button, 
+.fc-timeGridWeek-button, 
+.fc-timeGridDay-button, 
+.fc-listMonth-button {
+    margin: 2px !important;
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            form {
+                .modal-body {
+                    .change-address-body {
+                        .change-address-wrapper {
+                            .change-address-list {
+                                .error-text {
+                                    color:#ff0000;
+                                }
+                                .success-text {
+                                    color: #01930c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.event-details-modal {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    .change-address-body {
+                        .change-address-wrapper {
+                            .change-address-list {
+                                @include media-breakpoint-down(xs){
+                                    flex-wrap: wrap;
+                                }
+                                label {
+                                    min-width: 82px;
+                                    width: 30%;
+                                    @include media-breakpoint-down(xs){
+                                        width: 100%;
+                                        max-width: 100%;
+                                        text-align: left;
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                                span {
+                                    font-size: 14px;
+                                }
+                                .text-input {
+                                    @include media-breakpoint-down(xs) {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calendar-block {
+    .dropUp {
+        max-width: 250px;
+    }
+
+    .fc {
+        .fc-toolbar {
+            @media screen and (max-width: 640px){
+                flex-direction: column;
+            }
+            .fc-toolbar-chunk {
+                @media screen and (max-width: 640px){
+                    margin: 6px 0;
+                }
+                .fc-button-group {
+                    .fc-button {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

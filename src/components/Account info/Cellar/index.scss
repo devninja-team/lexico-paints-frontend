@@ -1,0 +1,90 @@
+.order-history-page {
+    .order-history-head {
+        @media screen and (max-width: 480px){
+            flex-direction: column;
+        }
+        .btn-add {
+            @media screen and (max-width: 480px){
+                width: 100%;
+            }
+            input {
+                background: #FFFFFF;
+                border: 1px solid #dee2e6;
+                padding: 12px 18px;
+                font-family: Montserrat;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #8D8D8D;
+                outline: none;
+                width: 400px;
+                border-radius: 25px;
+                @media screen and (max-width: 480px){
+                    width: 100%;
+                }
+            }
+            .btn {
+                border: 1px solid #0085FF;
+                border-radius: 25px;
+                padding: 4px 26px;
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #0085FF;
+                background-color: white;
+                outline: none;
+                &:hover {
+                    background-color: #0085FF;
+                    color: #FFFFFF;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+        .wine-main {
+            @media screen and (max-width: 480px) {
+                flex-wrap: wrap;
+            }
+            .wine-sub {
+                @media screen and (max-width: 480px) {
+                    flex: 1 100%;
+                    width: 100%;
+                }
+                input {
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .order-history-content {
+        .order-history-table {
+            .table {
+                td {
+                    .view-wines {
+                        color: #0085FF;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-history-mobile-table {
+        .mobile-table-row {
+            .mobile-table-list {
+                .mobile-table-footer {
+                    .shipping-option {
+                        .view-wines {
+                            text-decoration: underline;
+                            color: #0085FF !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

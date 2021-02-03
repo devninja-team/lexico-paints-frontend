@@ -1,0 +1,166 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.cursor-pointer {
+    cursor: pointer;
+}
+.table {
+  tbody {
+    tr {
+      td {
+        form {
+          display: flex;
+          input[type="text"]{
+            width: 80px;
+            margin-right: 8px;
+          }
+          .save-btn {
+            border: 1px solid #0085FF;
+            border-radius: 25px;
+            padding: 4px 18px;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #0085FF;
+            outline: none;
+            background-color: #FFFFFF;
+          }
+          .close-btn {
+            border: 1px solid #0085FF;
+            border-radius: 25px;
+            padding: 4px 8px;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #0085FF;
+            outline: none;
+            margin-left: 8px;
+            background-color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
+.data-filter {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      @include media-breakpoint-down(xs){
+        justify-content: flex-start;
+      }
+      li {
+        margin-left: 12px;
+        @include media-breakpoint-down(md) {
+          margin-top: 4px;
+        }
+        .btn-filter {
+          border: 1px solid #0085FF;
+          border-radius: 25px;
+          padding: 4px 26px;
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: #0085FF;
+          background-color: white;
+          @include media-breakpoint-down(lg) {
+            padding: 4px 12px;
+          }
+          &:hover {
+            color: #FFFFFF;
+            background-color: #0085FF;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+          &.active{
+            color: white;
+            background-color: #0085FF !important;
+            border-color: #0085FF !important;
+          }
+          .add-icon {
+            width: 16px;
+            margin-left: 6px;
+            vertical-align: sub;
+          }
+        }
+        .custom-select-wrapper {
+          .custom-selectDrop {
+            border: 1px solid #0085FF;
+            .custom-select__trigger {
+              padding: 3px 3px 3px 12px;
+              color: #0085FF;
+              text-align: center;
+            }
+          }
+        } 
+      }
+    }
+  }
+
+  .transaction-page {
+    .customer-data-head-filter {
+        @media screen and (max-width: 480px){
+            flex-direction: column;
+        }
+        .data-filter {
+            flex: 1;
+            max-width: 250px;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @media screen and (max-width: 480px){
+                width: 100%;
+                max-width: 100%;
+            }
+            .dropUp {
+                .custom-select-wrapper {
+                    .custom-selectDrop {
+                        border-radius: 0; 
+                        .custom-select__trigger {
+                            padding: 4px 12px;
+                        }                                     
+                    }
+                }
+            }
+        }
+    }
+    .all-customer-wrapper {
+        .all-customer-data {
+            .customer-table {
+                .table {
+                    tr {
+                        td {
+                            form {
+                                align-items: center;
+                                .dropUp {
+                                    margin-right: 8px;
+                                    .custom-select-wrapper {
+                                        margin-bottom: 0;
+                                        .custom-selectDrop {
+                                            border-radius: 0;
+                                            .custom-select__trigger {
+                                                padding: 4px 12px;
+                                            }                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

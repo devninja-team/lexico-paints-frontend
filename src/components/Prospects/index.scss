@@ -1,0 +1,105 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.transaction-page {
+    .customer-data-head-filter {
+        @media screen and (max-width: 480px){
+            flex-direction: column;
+        }
+        .customer-title {
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        .data-filter {
+            flex: none;
+            max-width: none;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @media screen and (max-width: 480px){
+                width: 100%;
+                max-width: 100%;
+            }
+            .dropUp {
+                min-width: 160px;
+                .custom-select-wrapper {
+                    margin-bottom: 0;
+                    .custom-selectDrop {
+                        border-radius: 0; 
+                        .custom-select__trigger {
+                            padding: 3px 3px 3px 12px;
+                        }
+                        .custom-options {
+                            max-height: 250px;
+                            overflow: auto;
+                        }                                
+                    }
+                }
+            }
+        }
+    }
+    .all-customer-wrapper {
+        .all-customer-data {
+            .all-customer-data-head {
+                @include media-breakpoint-down(sm){
+                    background-color: #ffffff;
+                    border-radius: 15px;
+                    margin-bottom: 15px;
+                }
+                border-bottom: 2px solid #E7E7E7;
+                .customer-data-head-filter {
+                    .data-filter {
+                        flex: initial;
+                        ul {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            @include media-breakpoint-down(xs){
+                                justify-content: flex-start;
+                            }
+                        }
+                        .dropUp {
+                            .custom-select-wrapper {
+                                .custom-selectDrop  {
+                                    border: 1px solid #0085FF;
+                                    border-radius: 25px;
+                                    .custom-select__trigger {
+                                        padding: 3px 3px 3px 12px;
+                                        color: #0085FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .customer-table {
+                .table {
+                    tr {
+                        td {
+                            form {
+                                align-items: center;
+                                .dropUp {
+                                    margin-right: 8px;
+                                    .custom-select-wrapper {
+                                        margin-bottom: 0;
+                                        .custom-selectDrop {
+                                            border-radius: 0;
+                                            .custom-select__trigger {
+                                                padding: 4px 12px;
+                                            }
+                                            .custom-options {
+                                                min-width: 200px;
+                                            }                               
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

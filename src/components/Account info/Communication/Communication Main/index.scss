@@ -1,0 +1,723 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.sub-head-navbar {
+  .custom-navbar {
+    background: #FFFFFF;
+    border-radius: 25px;
+    padding: 10px 35px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    .nav-list {
+      display: flex;
+      cursor: pointer;
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: capitalize;
+      color: #0085FF;
+      flex: 1;
+      .new-show {
+        margin-left: 10px;
+        span {
+          font-family: Montserrat;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 24px;
+          color: #FF5B5B;
+          display: block;
+        }
+      }
+      &.active, &:hover {
+        text-decoration: none;
+        color: #595959;
+      }
+    }
+  }
+
+  .mobile-accordion {
+    display: none;
+    margin-top: 15px;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+    .card {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      margin-bottom: 22px;
+      .card-header {
+        background: #FFFFFF;
+        border-radius: 15px;
+        &.head-show {
+          background: transparent;
+        }
+        .btn {
+          padding: 0;
+          width: 100%;
+          &:focus, &:hover {
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+          }
+          .title-contact-date {
+            .title-head {
+              max-width: 100px;
+              flex: 1;
+              display: flex;
+              span {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: capitalize;
+                color: #595959;
+              }
+            }
+            .contact-date {
+              span {
+                font-family: Montserrat;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 16px;
+                color: #595959;
+              }
+            }
+          }
+        }
+      }
+      .card-collapse {
+        background: #FFFFFF;
+        border-radius: 15px;
+        .card-body {
+          padding: 0;
+          .accordion-detail {
+            padding: 20px;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: 0 auto;
+              width: 90%;
+              height: 2px;
+              background-color: #E5E5E5;
+            }
+            .date-time-head {
+              .date-time-col {
+                margin-bottom: 4px;
+                label {
+                  font-family: Montserrat;
+                  font-weight: bold;
+                  font-size: 13px;
+                  line-height: 16px;
+                  color: #595959;
+                  margin-bottom: 0;
+                  margin-right: 8px;
+                }
+                span {
+                  font-family: Montserrat;
+                  font-weight: 500;
+                  font-size: 13px;
+                  line-height: 16px;
+                  color: #595959;
+                }
+              }
+            }
+            .details {
+              margin-top: 30px;
+              .details-title {
+                margin-bottom: 10px;
+                span {
+                  font-family: Montserrat;
+                  font-weight: bold;
+                  font-size: 16px;
+                  line-height: 20px;
+                  text-transform: capitalize;
+                  color: #595959;
+                }
+              }
+              p {
+                font-family: Montserrat;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                color: #595959;
+              }
+            }
+          }
+          .accordion-bottom-btn {
+            .accordion-btn-row {
+              button {
+                flex: 1;
+                font-family: Montserrat;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+                border: none;
+                padding: 13px 10px;
+                i {
+                  width: 18px;
+                  height: 18px;
+                  display: inline-block;
+                  margin-right: 8px;
+                  vertical-align: middle;
+                }
+                &.listen-btn {
+                  background: #80C2FF;
+                  border-radius: 0 0 0 15px;
+                  i {
+                    background: url("../../../../assets/images/listen-play.svg") no-repeat center center;
+                    background-size: contain;
+                  }
+                }
+              }
+              .btn {
+                flex: 1;
+                font-family: Montserrat;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+                border: none;
+                padding: 13px 10px;
+                i {
+                  width: 18px;
+                  height: 18px;
+                  display: inline-block;
+                  margin-right: 8px;
+                  vertical-align: middle;
+                }
+                &:focus {
+                  box-shadow: none;
+                }
+                &.listen-btn {
+                  background: #80C2FF;
+                  border-radius: 0 0 0 15px;
+                  i {
+                    background: url("../../../../assets/images/listen-play.svg") no-repeat center center;
+                    background-size: contain;
+                  }
+                }
+                &.call-btn {
+                  background: #86E284;
+                  border-radius: 0 0 15px 0;
+                }
+                &.note-btn {
+                  background: #FFB661;
+                  border-radius: 0px 0px 15px 15px;
+                  i {
+                    background: url("../../../../assets/images/edit-icon-white.svg") no-repeat center center;
+                    background-size: contain;
+                  }
+                }
+              }
+            }
+          }
+          .email-listing {
+            padding: 0 20px;
+            max-height: 350px;
+            overflow: auto;
+            .list {
+              border-bottom: 1px solid #E7E7E7;
+              padding: 10px 15px;
+              a {
+                .date-subject-row {
+                  .date-subject {
+                    width: 90px;
+                    label {
+                      font-family: Montserrat;
+                      font-weight: normal;
+                      font-size: 12px;
+                      line-height: 15px;
+                      color: #000000;
+                      margin-bottom: 0;
+                    }
+                  }
+                  .date-subject-dot {
+                    flex: 1;
+                    max-width: calc(100% - 90px);
+                    .date-sub {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      span {
+                        font-family: Montserrat;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #000000;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                      }
+                    }
+                    .list-dot {
+                      i {
+                        width: 15px;
+                        height: 15px;
+                        display: inline-block;
+                        background: #FF5B5B;
+                        border-radius: 50%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .email-drop-down {
+            label {
+              color: #595959;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .account-info-content-block {
+    .head {
+      .title {
+        h6 {
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #595959;
+        }
+      }
+    }
+    .content-card {
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      .customer-table {
+        .table {
+          thead {
+            th {
+              border-top: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-note-modal {
+  .modal-dialog {
+    .modal-content {
+      background: #FFDCB3;
+      border-radius: 20px;
+      .modal-header {
+        align-items: center;
+        padding: 20px;
+        .modal-title {
+          font-family: Montserrat;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+          color: #FF8A00;
+          i {
+            margin-right: 8px;
+            svg {
+              fill: #FF8A00;
+            }
+          }
+        }
+        .close {
+          color: #FF8A00;
+          padding: 0;
+          font-size: 28px;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border: 2px solid #FF8A00;
+          border-radius: 50%;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .modal-body {
+        padding: 0 10px;
+        .text-input {
+          .form-control {
+            background: #FFFFFF;
+            border-radius: 20px;
+            border: none;
+            padding: 12px;
+            resize: none;
+            height: 200px;
+          }
+        }
+      }
+      .modal-footer {
+        padding: 20px 15px;
+        .btn {
+          background: transparent;
+          border: none;
+          font-family: Montserrat;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FF8A00;
+          padding: 0;
+          margin: 0;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-card {
+  .customer-table {
+    .table {
+      thead {
+        th {
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
+      tbody {
+        td {
+          font-family: Montserrat;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          color: #000000;
+          &.status-complete {
+            color:#01930c
+          }
+          &.status-incomplete {
+            color:#ff0000
+          }
+          &:last-child {
+            text-align: right;
+          }
+        } 
+      }
+    }
+  }
+}
+
+.account-info-content-block {
+  flex: 1;
+  margin-right: 52px;
+  &.customer-details-info {
+    flex: 1 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    .accordion {
+      .card {
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          .user-section-link {
+            display: flex;
+            flex:1;
+            text-decoration: none;
+            outline: none;
+            box-shadow: none;
+            font-size: 15px;
+            line-height: 20px;
+            color: #595959;
+          }
+        }
+      }
+      .title {
+        padding: 10px;
+        h6 {
+          margin-bottom: 0;
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #595959;
+        }
+      }
+    }
+    .btn-add {
+      button {
+        border: 1px solid #0085FF;
+        border-radius: 25px;
+        padding: 4px 26px;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #0085FF;
+        background-color: white;
+        outline: none;
+        &:hover {
+          background-color: #0085FF;
+          color: #FFFFFF;
+        }
+      }
+
+    }
+    .head  {
+      .title {
+        h6 {
+          margin-bottom: 0;
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #595959;
+        }
+      }
+    }
+    .content-card {
+      &.card-body {
+        .content-detail {
+          .content-detail-list {
+            flex: 1 33.33%;
+            max-width: 33.33%;
+            @include media-breakpoint-down(xs) {
+              flex: 1 100%;
+              max-width: 100%;
+            }
+          }  
+        }  
+      }
+      .content-detail {
+        @include media-breakpoint-down(xs) {
+          flex-direction: column;
+        }
+        .content-detail-list {
+          flex: 2;
+          width: 100%;
+          &.note-left-section {
+            flex: 1;
+          }
+          .text-area-box {
+            resize: none;
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 25px;
+            padding: 18px;
+            font-family: Montserrat;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+            outline: none;
+            width: 100%;
+          }
+          .date-time-btn-wrapper {
+            > div {
+              width: 100%;
+            }
+            .date-time-input {
+              border: 1px solid #E5E5E5;
+              padding: 6px 8px 5px;
+              font-family: Montserrat;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 14px;
+              color: #8D8D8D;
+              border-radius: 8px;
+              background-color: #FFFFFF;
+              width: 100%;
+            }
+            .date-time-btn {
+              border: 1px solid #0085FF;
+              border-radius: 25px;
+              padding: 4px 26px;
+              font-family: Montserrat;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 15px;
+              color: #0085FF;
+              background-color: white;
+              outline: none;
+              &:hover {
+                background-color: #0085FF;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  .head {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    .title {
+      h6 {
+        margin-bottom: 0;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #595959;
+      }
+    }
+    .btn-save {
+      border: 1px solid #0085FF;
+      border-radius: 25px;
+      padding: 4px 26px;
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #0085FF;
+      background-color: white;
+      outline: none;
+      &:hover {
+        background-color: #0085FF;
+        color: #FFFFFF;
+      }
+    }
+    .edit {
+      .btn {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #066AFF;
+        &:hover, &:focus {
+          text-decoration: none;
+          box-shadow: none;
+        }
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .content-card {
+    background: #FFFFFF;
+    border-radius: 15px;
+    flex: 1;
+    .content-detail {
+      flex: 1;
+      padding: 14px 18px;
+      .content-detail-list {
+        margin-bottom: 8px;
+        span {
+          font-family: Montserrat;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          color: #595959;
+          display: block;
+        }
+        label {
+          font-family: Montserrat;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 15px;
+          color: #8D8D8D;
+          margin-bottom: 0;
+        }
+        .dropUp {
+          width: 60%;
+          .custom-select-wrapper {
+            margin-bottom: 0;
+            .custom-selectDrop  {
+              border-radius: 0;
+              .custom-select__trigger {
+                padding: 6px 12px;
+              }
+            }
+          }
+        }
+      }
+      &.address-block {
+        padding: 32px 45px 32px 32px;
+        flex: 60%;
+        @include media-breakpoint-down(sm){
+          flex: 50%;
+        }
+        &.billing-adr {
+          padding-left: 18px;
+          padding-right: 18px;
+          flex: 40%;
+          border-right: 1px solid #E7E7E7;
+          @include media-breakpoint-down(sm){
+            flex: 50%;
+            
+          }
+        }
+        .content-detail-list {
+          span {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .accordion {
+        .card {
+          .card-header {
+            display: flex;
+            justify-content: space-between;
+            .btn {
+              font-family: Montserrat;
+              font-weight: normal;
+              font-size: 15px;
+              line-height: 20px;
+              color: #595959;
+              text-decoration: none;
+              padding: 0;
+              width: calc(100% - 30px);
+              text-align: left;
+              
+              &:focus {
+                box-shadow: none;
+              }
+              &.edit-link {
+                width: auto;
+                text-align: right;
+                padding: 4px;
+              }
+            }
+          }
+          .card-body {
+            .account-info-detail {
+              .storage-details-row {
+                .storage-details-list {
+                  .storage-addr {
+                    span {
+                      display: block;
+                      font-family: Montserrat;
+                      font-weight: normal;
+                      font-size: 15px;
+                      line-height: 22px;
+                      color: #8D8D8D;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

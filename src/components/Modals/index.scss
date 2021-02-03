@@ -1,0 +1,22 @@
+.modal {
+    .modal-footer {
+        .btn-close {
+            border: 1px solid #0085FF;
+            border-radius: 25px;
+            padding: 4px 26px;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #0085FF;
+            background-color: white;
+            &:focus,
+            &:active:focus,
+            &:hover {
+                box-shadow: none;
+                background-color: #0085FF;
+                color: #FFF;
+            }
+        }
+    } 
+} 

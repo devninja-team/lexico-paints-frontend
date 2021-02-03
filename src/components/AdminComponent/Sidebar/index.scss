@@ -1,0 +1,82 @@
+.sidebar-menu-wrap {
+    .sidebar-menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                margin-bottom: 4px;
+                a {
+                    font-family: FuturaBT-Medium;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 25px;
+                    letter-spacing: 1.92px;
+                    text-transform: uppercase;
+                    color: #B6A576;
+                    cursor: pointer;
+                    &:hover, &.active {
+                        text-decoration: none;
+                        color: #6C6B6B;
+                    }
+                }
+            }
+        }
+    }
+    .sidebar-btn-list {
+        .btn {
+            background: #B6A576;
+            border-radius: 25px;
+            border: none;
+            font-family: FuturaBT-Medium;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0.28px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 2px 18px;
+            min-width: 158px;
+            &:hover {
+                background-color: #6E6D69;
+            }
+            &:focus, &:focus:active {
+                box-shadow: none;
+            }
+        }
+    }
+    .sidebar-dropdown-mobile {
+        .custom-select-wrapper {
+            justify-content: center;
+            .custom-selectDrop {
+                min-width: 215px;
+            }
+        }
+    }
+}
+
+.sidebar-bottom-button {
+    .sidebar-btn-list {
+        .btn {
+            background: #B6A576;
+            border-radius: 25px;
+            border: none;
+            font-family: FuturaBT-Medium;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0.28px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 2px 18px;
+            min-width: 158px;
+            margin: 6px;
+            &:hover {
+                background-color: #6E6D69;
+            }
+            &:focus, &:focus:active {
+                box-shadow: none;
+            }
+        }
+    }
+}

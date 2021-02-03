@@ -1,0 +1,359 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.create-invoice-wrapper {
+    .create-invoice-head {
+        h5 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            text-transform: capitalize;
+            color: #595959;
+            margin-bottom: 0;
+        }
+        button {
+            border: 1px solid #0085FF;
+            border-radius: 25px;
+            padding: 4px 26px;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #0085FF;
+            background-color: white;
+            outline: none;
+            &:hover {
+                color: #FFFFFF;
+                background-color: #0085FF;
+            }
+        }
+
+    }
+    .create-invoice-form {
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 20px;
+        .invoice-order-details {
+            .invoice-order-details-row {
+                .invoice-order-details-list {
+                    flex: 1 50%;
+                    max-width: calc(50% - 35px);
+                    padding-left: 0;
+                    margin-bottom: 15px;
+                    @include media-breakpoint-down(xs) {
+                        flex: 1 100%;
+                        max-width: 100%;
+                    }
+                    &:nth-child(2n+2) {
+                        margin-left: 70px;
+                        @include media-breakpoint-down(xs) {
+                            margin-left: 0;
+                        }
+                    }
+                    label {
+                        font-family: Montserrat;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 17px;
+                        color: #000000;
+                        margin-bottom: 0;
+                        display: block;
+                    }
+                    input {
+                        background-color: #fff;
+                        border: 1px solid #aaa;
+                        border-radius: 3px;
+                        padding: 8px 16px;
+                        width: 100%;
+                        transition: ease-in .1s;
+                        font-family: Montserrat;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #8D8D8D;
+                        height: 30px;
+                    }
+                    .dropUp {
+                        width: 100%;
+                        .custom-select-wrapper {
+                            margin-bottom: 0;
+                            .custom-selectDrop {
+                                border: 1px solid #aaa;
+                                border-radius: 3px;
+                                .custom-select__trigger {
+                                    padding: 5px 10px 5px;
+                                    font-size: 12px;
+                                    color: #8D8D8D;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .create-wine-details {
+            .create-wine-details-head {
+                h5 {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 29px;
+                    text-transform: capitalize;
+                    color: #595959;
+                    margin-bottom: 0;
+                }
+            }
+            .create-wine-submit-btn {
+                .btn {
+                    border: 1px solid #0085FF;
+                    border-radius: 25px;
+                    padding: 4px 26px;
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #0085FF;
+                    background-color: white;
+                    outline: none;
+                    &:hover {
+                        color: #FFFFFF;
+                        background-color: #0085FF;
+                    }
+                }
+                input {
+                    border: 1px solid #0085FF;
+                    border-radius: 25px;
+                    padding: 4px 26px;
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #ffffff;
+                    background-color: #0085FF;
+                    outline: none;
+                    margin-left: 8px;
+                }
+            }
+            .create-wine-details-form {
+                border-bottom: 1px solid #E5E5E5;
+                margin-bottom: 15px;
+                .cross-btn {
+                    border: 1px solid #0085FF;
+                    border-radius: 4px;
+                    padding: 8px 10px;
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #0085FF;
+                    background-color: white;
+                    outline: none;
+                }
+                .create-wine-details-row {
+                    .create-wine-details-list {
+                        flex: 1 50%;
+                        max-width: 50%;
+                        padding-left: 0;
+                        margin-bottom: 15px;
+                        &:nth-child(2n+2) {
+                            padding-left: 25px;
+                        }
+                        label {
+                            font-family: Montserrat;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 17px;
+                            color: #000000;
+                            margin-bottom: 0;
+                        }
+                        input {
+                            background-color: #fff;
+                            border: 1px solid #aaa;
+                            border-radius: 3px;
+                            padding: 8px 16px;
+                            width: 100%;
+                            transition: ease-in .1s;
+                            font-family: Montserrat;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #8D8D8D;
+                            height: 30px;
+                        }
+                        .dropUp {
+                            .custom-select-wrapper {
+                                margin-bottom: 0;
+                                .custom-selectDrop {
+                                    border: 1px solid #aaa;
+                                    border-radius: 3px;
+                                    .custom-select__trigger {
+                                        padding: 5px 10px 5px;
+                                        font-size: 12px;
+                                        color: #8D8D8D;
+                                    }
+                                }
+                            }
+                        }
+                        &.search-list {
+                            display: flex;
+                            flex: 1 100%;
+                            max-width: 100%;
+                            .btn {
+                                border: 1px solid #0085FF;
+                                padding: 4px 26px;
+                                font-family: Montserrat;
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 15px;
+                                color: #0085FF;
+                                background-color: white;
+                                outline: none;
+                                cursor: pointer;
+                                margin-left: 8px;
+                                height: 30px;
+                                &:hover {
+                                    color: #FFFFFF;
+                                    background-color: #0085FF;
+                                }
+                            }
+                        }
+                        &.checkbox-list {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            input {
+                                width: auto;
+                            }
+                        }
+                    }
+                    .wine-detail-bottom-right {
+                        width: 100%;
+                        .wine-detail-right {
+                            width: 100%;
+                            .create-wine-details-list {
+                                flex: 1 100%;
+                                max-width: 100%;
+                                padding-left: 0;
+                                label {
+                                    @include media-breakpoint-down(md) {
+                                        width: 65px;
+                                    }
+                                }
+                                .dropUp {
+                                    width: 100%;
+                                    .custom-select-wrapper {
+                                        .custom-selectDrop {
+                                            .custom-options {
+                                                max-height: 250px;
+                                                overflow: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.checkbox-list {
+                                    flex-direction: row;
+                                }
+                                &.wine-list {
+                                    flex: 1 100%;
+                                    max-width: 100%;
+                                }
+                                &.size-wine-list {
+                                    flex: 1 100%;
+                                    max-width: 100%;
+                                    @include media-breakpoint-down(md) {
+                                        flex: 1 50%;
+                                        max-width: 50%;
+                                    }
+                                    @include media-breakpoint-down(xs) {
+                                        flex: 1 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                                &.qty-wine-list {
+                                    flex: 1 20%;
+                                    max-width: 20%;
+                                    min-width: 160px;
+                                    @include media-breakpoint-down(md) {
+                                        flex: 1 50%;
+                                        max-width: 50%;
+                                    }
+                                    @include media-breakpoint-down(xs) {
+                                        flex: 1 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .create-invoice-form-block {
+                .create-invoice-form-btn {
+                    .btn {
+                        border: 1px solid #0085FF;
+                        border-radius: 25px;
+                        padding: 4px 26px;
+                        font-family: Montserrat;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #ffffff;
+                        background-color: #0085FF;
+                        outline: none;
+                        margin: 0 6px;
+                    }
+                }
+                .create-invoice-content {
+                    .create-invoice-content-list {
+                        flex: 1;
+                        margin-right: 25px;
+                        max-width: calc(50% - 12px);
+                    }
+                    .tariff-input {
+                        input {
+                            background-color: #fff;
+                            border: 1px solid #aaa;
+                            border-radius: 3px;
+                            padding: 8px 16px;
+                            width: 100%;
+                            transition: ease-in .1s;
+                            font-family: Montserrat;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #8D8D8D;
+                        }
+                    }
+                    .tariff-checkbox {
+                        label {
+                            font-family: Montserrat;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 17px;
+                            color: #000000;
+                            margin-bottom: 0;
+                            margin-left: 6px;
+                        }
+                    }
+                    .dropUp {
+                        .custom-select-wrapper {
+                            margin-bottom: 0;
+                            .custom-selectDrop  {
+                                border-radius: 0;
+                                .custom-select__trigger {
+                                    padding: 6px 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .error-wine {
+                font-size: 12px;
+                color: red;
+                display: block;
+            }
+        }
+    }
+}

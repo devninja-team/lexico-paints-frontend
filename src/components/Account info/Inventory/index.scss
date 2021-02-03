@@ -1,0 +1,70 @@
+.order-history-table {
+    .table {
+        td {
+            .edit-btn-inventory {
+                border: 0px solid #0085FF;
+                border-radius: 25px;
+                padding: 4px 26px;
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #0085FF;
+                background-color: white;
+                &:focus {
+                    box-shadow: none;
+                    &:active {
+                        box-shadow: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+            .edit-btn-show {
+                .btn {
+                    border: 1px solid #0085FF;
+                    border-radius: 25px;
+                    padding: 4px 26px;
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #0085FF;
+                    background-color: white;
+                    margin: 0 2px;
+                    &:hover {
+                        background-color: #0085FF;
+                        color: #ffffff;
+                    }
+                }
+            }
+            .dropUp {
+                .custom-select-wrapper {
+                    margin-bottom: 0;
+                    .custom-selectDrop {
+                        border-radius: 0;
+                        .custom-select__trigger {
+                            padding: 6px 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.order-history-page {
+    .order-history-head {
+        background-color: #ffffff;
+        border-radius: 25px 25px 0 0;
+        border-bottom: 2px solid #E7E7E7;
+        @media screen and (max-width: 767px){
+            border-radius: 25px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
+    }
+    .order-history-content {
+        .order-history-table {
+            border-radius: 0 0 25px 25px;
+        }
+    }
+}
